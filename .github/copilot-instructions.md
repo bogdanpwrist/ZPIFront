@@ -3,7 +3,10 @@ Generator stron dla 1osobych dziłanosći
 Apliakjca jest bardzo minimalistyczna i prosta
 
 ------- WAZNE ------ 
-Głowym modleułem jest kalendarz i strona głowóna oraz strona o mnie <--- To zrobić
+Zrobić welcome page i menu wyboru tempaltów (jest 1 testwoy)
+Po wyborze tamepaltu odpala się szczegołowsze menu gdzie można zanaczyć co z danego tempaltu się chche a co nie, on ma bazowo zaznaczone jakieś elementy
+
+Głowym modleułem jest strona główna, kalendarz oraz strona o mnie <--- To zrobić
 ale do wyboru powinny być też inne mofuły i podstrony 
 ------------------------------------------------
 
@@ -29,7 +32,7 @@ powinno prezenteać mozliwe opcje zeby mogli wybrac i NIE BYLI PRZYTŁOCZENI
 
 edytor pwoonien zapsiaywać zmiany w prostym systemie wersjonownia, np tylko 1 gałąź main aby można było wrócic po zmianaich
 
-# struktura projaketu
+# struktura projektu ----- DO OPRAWCOWANIA
 opisz jaka struktra apliakcji umożliwi taką funkcjonalość,  aby kazdy uzwykowik miał sowją stronę ale był 1 głowny edtor który wita nowcyh uzywkikch a potem przesyła ich na ich stronę, na pcoztaku nie musi to działac ale musi być na to miejsce 
 
 strulktura projektu musi być łatwa do modyfikacji, 
