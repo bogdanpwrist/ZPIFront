@@ -8,6 +8,16 @@ Po wyborze tamepaltu odpala się szczegołowsze menu gdzie można zanaczyć co z
 
 Głowym modleułem jest strona główna, kalendarz oraz strona o mnie <--- To zrobić
 ale do wyboru powinny być też inne mofuły i podstrony 
+
+Edytor jest nad stroną, wszytsko jest w edytorze :
+<Edytor>
+    <Strona>
+        <Kalendarz></Kalendarz>
+    </Strona>
+</Edytor>
+
+Edyotr jest stroną, dlatgeo może edytować "siebie"
+
 ------------------------------------------------
 
 # HOME PAGE
