@@ -49,3 +49,7 @@ jest to blok na który używkonicy mogą się zapisać wiec jest on dostepny,
 powien być mozliwy do ustawinia limit miejsc oraz podanie podstwaych informacji o zajęciach
 
 powinno być miejse na więcej templatów ale na pocatek wystaczy 1
+
+1 backend dla nas zaawansowy
+
+bakcend dla kaxdego uzywkowika 
