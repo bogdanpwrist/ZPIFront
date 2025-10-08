@@ -105,3 +105,67 @@ Każdy użytkowik może mieć max 3 storny, wszytskie powinny mieć 1 współny 
 jest to strona osobista więc jeśli użytkowik ma zajęcia yogi od 14 do 15 to na innej swojej stronie gdizie prowadzi np kurs kulinarny jest niedostępny w tym terminie.
 
 Znacznie ułatwia to integracje wielu stron danego użytkownika, mamy 1 backend i 1 baze danych i max 3 frontedny (dla każdej innej działalności). Każdy frontend powinien więc zapisawć do bazy z której strony pochodzi dany wpis, każda strona powinna mieć krótki tytuł np [YOGA] lub [KULINARIA], taki tag, najepiej 1 słowo, niech użytowkik sam to wpisze.
+
+
+
+---------------------------------------------------------------------------------------------
+# BACKEND
+Backend dzili się na 2 części :
+    BIG BACKEND
+    Small Backend
+
+# Small Backend
+Jest to osobisty backend każdego z klinetów i odpowiada on za utrzymanie jego stron.
+Zarządza jego osobistą bazą danych, rezerwuje spotkania itd.
+
+# BIG BACKEND
+Jest to głowny backend naszej apliakcji - Edytora/Generatora stron.
+Ma on BAZĘ klinetów którzy mają u nas strony.
+
+Każdy klient ma :
+    ID (PK)
+    Imię
+    Nazwisko
+    Email
+    Telefon
+    Saldo
+    Typ klienta [Free/Pro]
+    Tag [JACEK/BODAN/STANISLAW/WEB/0DAY] (Tag będzie pokazywał skąd pochodzi dany klinet)
+    Strony[ID_STONY,ID_STRONY,ID_STRONY] (powiązanie strony z klientem)
+    Small_Backend[ID_Small_Backendu]
+    Baza Danych[ID_Bazy]
+    itd...
+
+Do każdego klineta są podłączone strony, klient jest główym obiektem a strony są pod nim, nie może być strony bez klienta.
+
+Każda strona(frontend) ma :
+    ID (PK)
+    Nazwę[YOGA]
+    Hsitorię wersji
+
+Każda baza ma:
+    ID (PK)
+    Hoster (Kto hostuje tą baze,np Amazon itd)
+    Dane do połaczenia
+    ID_Backupu (jakoś ogarnąć backupy, możemy mieć backup każdego klienta u siebe w bazie)
+
+Każdy Small_Backend ma :
+    ID (PK)
+    ...
+
+Z BIG BAKCENDU powinniśmy móc monitorować działanie każdego z mniejszych systemów czyli :   
+    Lączyć się do small_backendu jakiegos usera bo coś nie działa
+    Mieć healthchecki i wysietlać czy dany system działa
+    Wyświetlać wsyztkie niedziałajace systemy
+    Móc ściągnąć logi każdego z systemów
+    Wyłączyć/włączyć dany serwis
+
+Powinnimy też móc zarządzać userami, zmieniać ich dane i uprawnienia
+
+
+
+
+
+
+
+
