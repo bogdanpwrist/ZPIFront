@@ -118,6 +118,9 @@ Backend dzili się na 2 części :
 Jest to osobisty backend każdego z klinetów i odpowiada on za utrzymanie jego stron.
 Zarządza jego osobistą bazą danych, rezerwuje spotkania itd.
 
+Czy small backned może hostować frontendy ?
+jeśli tak to będzie fajnie.
+
 # BIG BACKEND
 Jest to głowny backend naszej apliakcji - Edytora/Generatora stron.
 Ma on BAZĘ klinetów którzy mają u nas strony.
@@ -151,6 +154,7 @@ Każda baza ma:
 
 Każdy Small_Backend ma :
     ID (PK)
+    Dane do połączenia
     ...
 
 Z BIG BAKCENDU powinniśmy móc monitorować działanie każdego z mniejszych systemów czyli :   
@@ -161,11 +165,3 @@ Z BIG BAKCENDU powinniśmy móc monitorować działanie każdego z mniejszych sy
     Wyłączyć/włączyć dany serwis
 
 Powinnimy też móc zarządzać userami, zmieniać ich dane i uprawnienia
-
-
-
-
-
-
-
-
