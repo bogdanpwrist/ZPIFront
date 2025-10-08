@@ -1,8 +1,13 @@
 Tworzysz frontend dla :
 
-Generator stron dla 1osobych dziłanosći
+Generatora stron osobistych dla 1-osobych działalności
 
-Apliakjca jest bardzo minimalistyczna i prosta, design jest elegancki i nowoczesny 
+Apliakjca jest bardzo minimalistyczna, prosta i intuicyjna.
+Design jest elegancki i nowoczesny 
+
+Kierowana jest do użytkowików bez znajomości kodowania/projektowania stron, dlatego musi być maksymalnie prosta aby ich nie rozpraszać i nie przytłaczać.
+
+W trybie edycji pomaga ZINTEGROWANY AGENT AI, który wykonuje operacje zlecone przez użytkowika, oferuje 3 rozwiąznaia danego problemu tak aby użykowik mógł wybrać która mu najbardziej odpowiada.
 
 ------- WAZNE ------ 
 Zrobić welcome page i menu wyboru tempaltów (jest 1 testwoy)
@@ -30,15 +35,15 @@ jako że strona jest w całości stworzona z naszych modułów, którym nadano j
 W ten sosób możemy proawdzić wersojnowanie strony, po portsu zapsiaywać stronę jako nowy tempalte po zmianach. 
 
 Załadowanie templatu do pustego edytora powinno odtowrzyć stronę bez starty żdanych danych.
-------------------------------------------------
 
 # HOME PAGE
-na początku pwoien wyświetlić się ekran powitalny, czarne logo na beżowym(lub białym) tle i przycisk stwórz, pod nim mały napis "lub upuść plik" który powinien załadować upouszcozny template
+na początku pwoien wyświetlić się ekran powitalny, czarne logo na beżowym(lub białym) tle i przycisk "Stwórz swoją stronę"
 
-W prawym górym rogu powinno być zaloguj które przeniesie do twojej strony jeśli ją masz,
+W prawym górym rogu powinno być zaloguj które przeniesie użytkowika do "Studia" czyli strony do zarządzania stronami.
+
 powinno być też autmatyczne logowanie aby ułatwić życie
 
-Przycisk stówrz otiwera menu wybriania tamepletu (na pocztaku 1 tetsowy)
+Przycisk "Stwórz swoją stronę" otiwera menu wybierania templetu (na pocztaku 1 tetsowy)
 
 Po wybrnaiu templatu wyświetla się szczegołowsze menu gdzie można zanaczyć lub odznaczyć moduły(podstrony) i zmienić ich ustawienia.
 
@@ -48,26 +53,20 @@ rozdaj zajęć [indywidualne/ grupowe]
 
 Po wybraniu opcji kliknąć OK
 
-następnie powinno nastąpić przejście do strony, bez edycji, po prostu wyświetlić stworzoną stronę z wybarnymi modułami
+następnie powinno nastąpić przejście do edytora.
+Nasz edytor wyróżnia się tym że wygląda jak normalna strona, jedynie na górze pojawia się mały pasek z najważniejszymi narzędziami i zmainia orietacji na mobilną itd oraz miejce na czat z Agentem. 
 
-## i wyśiwtelić wskazówkę na przycisk edytora
-aplikacja powinna płynnie prowadzić użytkowika, wskazówki nie powinny blokować użytkownika tylko lekko wskazywać kierunek.
+Kliknięte elemnty powinny się zanzaczyć a w oknie czatu pownno pisać jaki elemt jest zanaczony, można zanaczyć wiele trzymając shift lub ctrl.
 
-edytor powinień mieć mały przycisk w prawym gorym rogu ktory go aktywuje,
-pojawia się miniamly toolbox na górze ktory ma tylko najbardziej potrzebne toole, takie jak zmainia orietacji na mobilną itd,
-
-edycja powinna być maksymalnie prosta powinnien wysaoczyć mały czat z agentem AI ktory spyta co chemy zorbić i po wpisaniu powinien zanzaczyć co chce zmienić i wyświtelić 3 możliwe opcje zmiany lub dopytać się o szczegóły.
+edycja powinna być maksymalnie prosta, agent pyta co zrobić.
+po wpisaniu powinien zanzaczyć co zmienia i wyświtelić 3 możliwe opcje zmiany lub dopytać się o szczegóły.
 
 powinien wyśiwtelić też porzebne do edycji narzędzia np okno do zmiany koloru. Musi ono być proste w obsłudze, efekty muszą być widoczne od razu, musi wykonwać ono 1 funkcjonalość, np zmeiniać kolor wybranego elementu.
-
-Można też klinać na element i napsiac co zmienić, wtedy agent powinien wiedzieć co zostało zaznaczone.
 
 Edytor musi być minimalny, ładny i prosty, ui musi być płynne, zaookroglne i eststyczne 
 jest to celowane do użytkowiników którzy cenią sobie profesjonalość (ale mogą nie znać sie na porgramowaniu)
 
-powinno prezenteać 3 mozliwe opcje zeby mogli wybrac i NIE BYLI PRZYTŁOCZENI
-
-edytor pwoonien zapsiaywać zmiany w prostym systemie wersjonownia, np tylko 1 gałąź main aby można było wrócic po zmianaich
+edytor pwoonien zapsiaywać zmiany w prostym systemie wersjonowania, 1 gałąź main aby można było wrócic po zmianaich
 
 # Struktura projektu
 Głównya witryna to [HOME PAGE] edytora opisnay powyżej,
