@@ -1,3 +1,5 @@
+Tworzysz frontend dla :
+
 Generator stron dla 1osobych dziłanosći
 
 Apliakjca jest bardzo minimalistyczna i prosta, design jest elegancki i nowoczesny 
@@ -49,6 +51,7 @@ Po wybraniu opcji kliknąć OK
 następnie powinno nastąpić przejście do strony, bez edycji, po prostu wyświetlić stworzoną stronę z wybarnymi modułami
 
 ## i wyśiwtelić wskazówkę na przycisk edytora
+aplikacja powinna płynnie prowadzić użytkowika, wskazówki nie powinny blokować użytkownika tylko lekko wskazywać kierunek.
 
 edytor powinień mieć mały przycisk w prawym gorym rogu ktory go aktywuje,
 pojawia się miniamly toolbox na górze ktory ma tylko najbardziej potrzebne toole, takie jak zmainia orietacji na mobilną itd,
@@ -66,36 +69,39 @@ powinno prezenteać 3 mozliwe opcje zeby mogli wybrac i NIE BYLI PRZYTŁOCZENI
 
 edytor pwoonien zapsiaywać zmiany w prostym systemie wersjonownia, np tylko 1 gałąź main aby można było wrócic po zmianaich
 
-# struktura projektu ----- DO OPRAWCOWANIA
-opisz jaka struktra apliakcji umożliwi aby kazdy uzwykowik miał sowją prywatną stronę ale główna witryna powinna być naszym generatorem, który wita nowcyh uzywkikch a potem przesyła ich na ich stronę, na pcoztaku nie musi to działac ale musi być na to miejsce 
+# Struktura projektu
+Głównya witryna to [HOME PAGE] edytora opisnay powyżej,
+następnie można się zalogować aby zarządzać swoimi stronami
+lub nie logować się i kliknąć przycisk aby rozpocząć tworzenie nowej strony(logowanie potem)
 
-struktura projektu musi być modułowa i łatwa do modyfikacji.
+Każdy użytkowik może mieć :
+    max 3 strony(frontend) osobiste - (każda na inną działalność)
+    1 backend zarządzający wszystkimi stronami
+    1 bazę danych zapisującą wszytkie wydarzenia ze wszytkich stron
+    (+ jakiś backup jako że chcemy używać darmowych hostingów xd)
+
+Po zalogowaniu do edytora użytkowik zobaczy swoje "Studio" ze stronami i może :
+    stworzyć nową stronę i przejść do edycji
+    wybrać dowolną ze swoich stron by ją załadować do edytora
+    wybrać dowolną ze swoich stron i przejść do niej bez edytora (po prostu link)
+
+Edytor zmienia układ strony, dodaje i usuwa moduły itd. ale każda ze stron ma ten swój panel admina gdzie układa się spotaknia, terminy oraz dostępność, tego NIE ROBI SIE W EDYTORZE.
+
+Struktura projektu musi być modułowa i łatwa do modyfikacji.
 
 Aplikacja jest stworzona dla 1osobowych działnosci wiec strony są proste i nie przewiduje się bardzo dużego ruchu.
 
-Główną funckjonalsoćą jest kalendarz integrujacy sie z google kalnadrzem, wyysłanie maili , system rezerwacji i potwerdzanie spotakń, zajecia indywidujane i grupowe( kazde z nich to osobna część klandarza)
+Główną funckjonalsoćą jest kalendarz integrujacy sie z google kalnadrzem, system rezerwacji, wysyłanie maili z potwierdzeniami, zajecia indywidujane i grupowe(kazde z nich to osobna część kalendarza)
 
-KAZDY MODÓŁ MA SWOJE USTWAINIA np :
-minimaly odstęp między spotaknami w kalndarzu,
-rozdaj zajęć [indywidualne/ grupowe]
-
-na zajecia indywidujlne moze sie zapisać 1 osoba i sa zajete, 
-podczas zajecć grupowych właściciel storny jest zajęty ale
-jest to blok na który używkonicy mogą się zapisać wiec jest on dostepny,
-powien być mozliwy do ustawinia limit miejsc oraz podanie podstwaych informacji o zajęciach( lokalizacja lub np że online [POTEM to wtedy link do spotkania na google np])
-
-# DO OPRACOWANIA
-
-1 backend dla nas zaawansowy ?
-
-bakcend dla kaxdego uzywkowika ?
-
-Czy każdy użytkowik musi mieć pełen backend i forntend z edytorem, czy zbyt nie spowolni to stron i czy jest to potzrbne ?
-
-# roziwązanie
-czy może że strona jest hostawana z ostaniej(najnowszej) wersji strony stworzonej w edytorze ale edtor działa tylko u nas a link na stronie przenosi admina do naszego edytora gdzie może zmieniać swoją stronę.
+# Struktura Infrastruktury
+strona użytkowika jest hostawana z ostaniej(najnowszej) wersji strony stworzonej w edytorze ale edytor działa tylko u nas a przycisk edycji przenosi go do naszego edytora gdzie może zmieniać swoją stronę.
 
 wtedy każdy może mieć własny mały backend i frontend (w trybie produkcyjnym)
 a edycja bedzie działała u nas (w trybie deloperskim, co daje hot realod - zmiany są widoczne od razu)
 
 Po skończeniu edycji następuje relunch prawdziwej strony z nową wersją
+
+Każdy użytkowik może mieć max 3 storny, wszytskie powinny mieć 1 współny bakcend. 
+jest to strona osobista więc jeśli użytkowik ma zajęcia yogi od 14 do 15 to na innej swojej stronie gdizie prowadzi np kurs kulinarny jest niedostępny w tym terminie.
+
+Znacznie ułatwia to integracje wielu stron danego użytkownika, mamy 1 backend i 1 baze danych i max 3 frontedny (dla każdej innej działalności). Każdy frontend powinien więc zapisawć do bazy z której strony pochodzi dany wpis, każda strona powinna mieć krótki tytuł np [YOGA] lub [KULINARIA], taki tag, najepiej 1 słowo, niech użytowkik sam to wpisze.
