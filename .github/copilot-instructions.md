@@ -9,21 +9,21 @@ Kierowana jest do użytkowików bez znajomości kodowania/projektowania stron, d
 
 W trybie edycji pomaga ZINTEGROWANY AGENT AI, który wykonuje operacje zlecone przez użytkowika, oferuje 3 rozwiąznaia danego problemu tak aby użykowik mógł wybrać która mu najbardziej odpowiada.
 
-------- WAZNE ------ 
+# TO DO
 Zrobić welcome page i menu wyboru tempaltów (jest 1 testwoy)
 Po wyborze tempaltu odpala się szczegołowsze menu gdzie można zanaczyć co z danego tempaltu się chce a czego nie, on ma bazowo zaznaczone jakieś elementy
 
 Głowym modleułem jest strona główna, kalendarz oraz strona o mnie <--- To zrobić
 ale do wyboru powinny być też inne moduły i podstrony (moduł i podstrona to chyba to samo) 
 
+-------------------------------------------------------
 Edytor to główna aplikacja, strona zawiera się w nim :
 <Edytor>
     <Strona>
         <Kalendarz></Kalendarz>
     </Strona>
 </Edytor>
-
-Edyotr jest stroną, dlatgeo może edytować "siebie"
+------------------------------------------------------
 
 # TEMPLATY i Zapis
 Kluczowa jest możliwość eksportu storny jako TEMPLATU, 
@@ -34,7 +34,7 @@ jako że strona jest w całości stworzona z naszych modułów, którym nadano j
 
 W ten sosób możemy proawdzić wersojnowanie strony, po portsu zapsiaywać stronę jako nowy tempalte po zmianach. 
 
-Załadowanie templatu do pustego edytora powinno odtowrzyć stronę bez starty żdanych danych.
+Załadowanie templatu do pustego edytora powinno odtowrzyć stronę w identycznym stanie.
 
 # HOME PAGE
 na początku pwoien wyświetlić się ekran powitalny, czarne logo na beżowym(lub białym) tle i przycisk "Stwórz swoją stronę"
@@ -53,6 +53,7 @@ rozdaj zajęć [indywidualne/ grupowe]
 
 Po wybraniu opcji kliknąć OK
 
+# EDYTOR
 następnie powinno nastąpić przejście do edytora.
 Nasz edytor wyróżnia się tym że wygląda jak normalna strona, jedynie na górze pojawia się mały pasek z najważniejszymi narzędziami i zmainia orietacji na mobilną itd oraz miejce na czat z Agentem. 
 
